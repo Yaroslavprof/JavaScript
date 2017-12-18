@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handler as attribute</title>
+	<script type="text/javascript">
+
+		var name = prompt("Enter yor name: ");
+		function greed (){
+			alert ("Hello" + name);
+		}
+		greed ();
+
+		function validate(){
+			alert ("Validate");
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="button1" value="Counter" onclick="if (window.counter) counter ++ ; else counter = 1; this.value = counter;" >
+
+	<form>
+		<!-- <input type="text" name="firstName"> -->
+		<br>
+		<input type="reset" onclick="return confirm('Are you shure?')"/>
+		<input type="submit" onclick="validate()"/>	
+	</form>
+
+	<input type="button" name="button1" value="Click me" onclick="alert('Hello!')"/>
+
+
+
+
+
+
+
+</body>
+</html>

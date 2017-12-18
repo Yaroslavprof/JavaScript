@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handler as attribute</title>
+	<script type="text/javascript">
+		window.onload = loadHandler;
+		function loadHandler (){
+			var p1 = document.getElementById("p1");
+			var p2 = document.getElementById("p2");
+
+			p1.onclick = function(){
+				alert("Hello")
+			};
+			p2.onclick = clickHandler;
+		}
+
+		function clickHandler(){
+			alert("Hello");
+		}
+	</script>
+</head>
+
+<body>
+	<p id="p1">Click me!</p>
+	<p id="p2">Click me!</p>
+
+</body>
+</html>

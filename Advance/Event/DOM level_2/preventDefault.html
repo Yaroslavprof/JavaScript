@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>preventDefault</title>
+	<script type="text/javascript">
+
+         window.addEventListener("load", function(){
+            document.forms[0].addEventListener("submit", function(e){
+                if (document.getElementById("nameInput").value.length == 0) {
+                    e.preventDefault();
+                    alert("Enter name");
+                }
+            }, false);
+         }, false);   
+
+    </script>
+
+	 
+</head>
+
+<body>
+	<form action="/test.html" method="post">
+        Name <input id="nameInput" type="text" name="name"/>
+        <input type="submit" value="send"/>
+        
+    </form>
+
+</body>
+</html> 

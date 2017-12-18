@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThisKeyword</title>
+	<script type="text/javascript">
+		function loadHandler(){
+			var e = document.getElementById("input1");
+			e.onclick = function(){
+				this.value = "Clicked Zhora";
+			};
+		}
+	</script>
+</head>
+
+<body onload="loadHandler()">
+	<input type="button" value="Click me" onclick="this.value = 'Clicked'"/>
+	<input type="button" id="input1" value="Click me"/>
+
+</body>
+</html>

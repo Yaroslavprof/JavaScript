@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stopPropagation</title>
+	<script type="text/javascript">
+        var isTunnel = false;
+        window.onload = function(){
+            var e1 = document.getElementById("first");
+            var e2 = document.getElementById("second");
+            var e3 = document.getElementById("third");
+
+            e1.addEventListener ("click", 
+                function (e){
+                    this.style.backgroundColor = "green";
+                    alert("Handler DIV 1");
+                    e.stopPropagation();
+                },
+                isTunnel);
+
+            e2.addEventListener ("click", 
+                function (e){
+                    this.style.backgroundColor = "yellow";
+                    alert("Handler DIV 2");
+                    e.stopPropagation();
+                },
+                isTunnel);
+
+            e3.addEventListener ("click", 
+                function (e){
+                    this.style.backgroundColor = "blue";
+                    alert("Handler DIV 3");
+                    e.stopPropagation();
+                },
+                isTunnel);
+            
+
+        }
+
+    </script>
+    <style>
+        div{
+            border: 3px solid grey;
+            padding: 50px;
+            background-color: #fff;
+        }
+    </style>
+
+	 
+</head>
+
+<body>
+    1th <div id="first">
+        2th<div id="second">
+            3th <div id="third"></div>
+        </div>
+    </div>
+
+</body>
+</html> 

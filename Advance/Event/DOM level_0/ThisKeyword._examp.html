@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThisKeyword</title>
+	<script type="text/javascript">
+		function loadHandler (){
+			var e = document.getElementById("input2");
+			e.onclick = function(){
+				this.value = "Hello Zhora";
+			};
+		}
+
+	</script>
+</head>
+
+<body onload="loadHandler()">
+	<input type="button" value="Click Me!" onclick="this.value = 'Hello Vasya! '"/>
+	<input type="button"  id="input2" value="Click me!">
+
+</body>
+</html>

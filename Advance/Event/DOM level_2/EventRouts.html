@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EventRouts</title>
+	<script type="text/javascript">
+
+	 var isTunnel = true;
+
+        window.onload = function () {
+            var e1 = document.getElementById("first");
+            var e2 = document.getElementById("second");
+            var e3 = document.getElementById("third");
+
+            e1.addEventListener("click",
+                function () {
+                    this.style.backgroundColor = "green";
+                    alert("Обработчик DIV 1");
+                },
+            isTunnel);
+
+            e2.addEventListener("click",
+                function () {
+                    this.style.backgroundColor = "yellow";
+                    alert("Обработчик DIV 2");
+                },
+            isTunnel);
+
+            e3.addEventListener("click",
+                function () {
+                    this.style.backgroundColor = "red";
+                    alert("Обработчик DIV 3");
+                },
+            isTunnel);
+        }
+
+	</script> 
+	<style type="text/css">
+		div{
+			border: 3px solid gray;
+			padding: 50px;
+			background-color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	Первый
+    <div id="first">
+        Второй
+        <div id="second">
+            Третий
+            <div id="third">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
